@@ -1,0 +1,20 @@
+{
+  "name": "outline",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "execute": "node index",
+    "build": "webpack --progress --mode=development"
+  },
+  "author": "Danil Kosenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.9",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
