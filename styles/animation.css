@@ -1,0 +1,255 @@
+/* APPEAR ANIMATION */
+/* APPEAR ANIMATION */
+/* APPEAR ANIMATION */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* MAIN */
+/* MAIN */
+/* MAIN */
+main.to_animate h2,
+main.to_animate p,
+main.to_animate button,
+main.to_animate img {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+main.animated h2 {
+  animation: fadeIn 1s both;
+}
+
+main.animated p {
+  animation: fadeIn 1s .3s both;
+}
+
+main.animated button {
+  animation: fadeIn 1s .6s both;
+}
+
+main.animated img {
+  animation: fadeIn 1s .6s both;
+}
+
+/* CLIENTS */
+/* CLIENTS */
+/* CLIENTS */
+.clients.to_animate li {
+  opacity: 0;
+}
+
+.clients.animated li:nth-child(1) {
+  animation: fade 1s .1s both;
+}
+
+.clients.animated li:nth-child(2) {
+  animation: fade 1s .4s both;
+}
+
+.clients.animated li:nth-child(3) {
+  animation: fade 1s .7s both;
+}
+
+.clients.animated li:nth-child(4) {
+  animation: fade 1s 1s both;
+}
+
+/* FEATURES */
+/* FEATURES */
+/* FEATURES */
+.features.to_animate h3,
+.features.to_animate .features_text p,
+.features.to_animate .feature_container,
+.features.to_animate button {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.features.animated h3 {
+  animation: fadeIn 1s both;
+}
+
+.features.animated .features_text p {
+  animation: fadeIn 1s .3s both;
+}
+
+.features.animated .feature_container:nth-child(1) {
+  animation: fadeIn 1s .6s both;
+}
+
+.features.animated .feature_container:nth-child(2) {
+  animation: fadeIn 1s .8s both;
+}
+
+.features.animated .feature_container:nth-child(3) {
+  animation: fadeIn 1s 1s both;
+}
+
+.features.animated .feature_container:nth-child(4) {
+  animation: fadeIn 1s 1.2s both;
+}
+
+.features.animated button {
+  animation: fadeIn 1s 1.4s both;
+}
+
+/* DESIGN */
+/* DESIGN */
+/* DESIGN */
+.design.to_animate h3,
+.design.to_animate .design_text p {
+  opacity: 0;
+}
+
+.design.animated h3 {
+  animation: fade 1s both;
+}
+
+.design.animated .design_text p {
+  animation: fade 1s .3s both;
+}
+
+.design.to_animate img {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.design.animated img {
+  animation: fadeIn 0.8s .6s both;
+}
+
+.design.animated .item:nth-child(1) {
+  animation: fadeLeft 1.5s .9s both;
+}
+
+.design.animated .item:nth-child(2) {
+  animation: fadeLeft 1.5s 1.2s both;
+}
+
+.design.animated .item:nth-child(4) {
+  animation: fadeRight 1.5s .9s both;
+}
+
+.design.animated .item:nth-child(5) {
+  animation: fadeRight 1.5s 1.2s both;
+}
+
+@media screen and (max-width: 1100px) {
+  .design.animated .item:nth-child(1) {
+    animation: fadeRight 1.5s .9s both;
+  }
+
+  .design.animated .item:nth-child(2) {
+    animation: fadeLeft 1.5s .9s both;
+  }
+
+  .design.animated .item:nth-child(4) {
+    animation: fadeRight 1.5s 1.2s both;
+  }
+
+  .design.animated .item:nth-child(5) {
+    animation: fadeLeft 1.5s 1.2s both;
+  }
+}
+
+/* TESTIMONIES */
+/* TESTIMONIES */
+/* TESTIMONIES */
+.replies.to_animate .container,
+.statistics.to_animate div {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.replies.animated .container {
+  animation: fadeIn 1s;
+}
+
+.statistics.animated div {
+  animation: fadeIn 1s both;
+}
+
+/* QUESTIONS */
+/* QUESTIONS */
+/* QUESTIONS */
+.questions.to_animate h3,
+.questions.to_animate .questions_text p,
+.quetions.to_animate .question_container {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.questions.animated h3 {
+  animation: fadeIn 1s both;
+}
+
+.questions.animated .questions_text p {
+  animation: fadeIn 1s .3s both;
+}
+
+.questions.animated .question_container:nth-child(1) {
+  animation: fadeIn 1s .8s both;
+}
+
+.questions.animated .question_container:nth-child(2) {
+  animation: fadeIn 1s .95s both;
+}
+
+.questions.animated .question_container:nth-child(3) {
+  animation: fadeIn 1s 1.1s both;
+}
+
+.questions.animated .question_container:nth-child(4) {
+  animation: fadeIn 1s 1.25s both;
+}
+
+.questions.animated .question_container:nth-child(5) {
+  animation: fadeIn 1s 1.4s both;
+}
+
+.questions.animated .question_container:nth-child(6) {
+  animation: fadeIn 1s 1.55s both;
+}

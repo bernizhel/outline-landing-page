@@ -1,0 +1,71 @@
+/* SIDE MENU */
+/* SIDE MENU */
+/* SIDE MENU */
+.side_menu {
+  height: 100%;
+  width: 250px;
+  right: -250px;
+  z-index: 999;
+  background-color: #fff;
+  position: fixed;
+  transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+  padding: 25px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+}
+
+.side_menu.active {
+  right: 0;
+}
+
+.side_menu a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  font-size: 1.125rem;
+  transition: .3s ease-out;
+}
+
+.side_menu a:hover {
+  color: #30bdab;
+}
+
+header nav:hover .menu-bars.active .bar {
+  margin: 3px 0;
+}
+
+header .menu-bars.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+header .menu-bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+header .menu-bars.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.page {
+  transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+}
+
+.page.active {
+  transform: translateX(-250px);
+}
+
+header.fixed.active {
+  transform: translateX(-250px);
+}
+
+.side_menu.fixed {
+  transform: translateY(81px);
+  padding-top: 19px;
+}
+
+footer.active {
+  transform: translateX(-250px);
+}
