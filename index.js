@@ -285,7 +285,7 @@ function circleMenuSwitch() {
       switchReplies(toRight, 0, 'ease-out');
       clearInterval(inv);
     }, REPLIES_ANIMATION_DURATION / 2);
-  } else {
+  } else if (Math.abs(idDifference) === 1) {
     switchReplies(toRight);
   }
 }
