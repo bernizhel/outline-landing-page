@@ -1,4 +1,9 @@
-"use strict";
+import '@s/main.css';
+import '@s/header.css';
+import '@s/replies.css';
+import '@s/sidebar.css';
+import '@s/media.css';
+import '@s/animation.css';
 
 
 // Scroll problem
@@ -7,16 +12,15 @@
 window.addEventListener('scroll', () => {
   localStorage.scrollX = window.scrollX;
   localStorage.scrollY = window.scrollY;
-})
+});
 
 window.addEventListener('load', () => {
   window.scrollTo(localStorage.scrollX || 0, localStorage.scrollY || 0);
-})
+});
 
 window.onunload = () => {
   localStorage.clear();
 };
-
 
 
 // Constants
@@ -34,7 +38,6 @@ const clientsElem = document.querySelector('.clients');
 const footerElem = document.querySelector('footer');
 const repliesElem = document.querySelector('.replies');
 const statisticsElem = document.querySelector('.statistics');
-
 
 
 // Appear animation
@@ -129,7 +132,7 @@ function goToSection() {
     featuresElem,
     designElem,
     testimoniesElem,
-    questionsElem
+    questionsElem,
   ];
   let endpoint;
   for (let elem of endpoints) {
@@ -141,19 +144,18 @@ function goToSection() {
   window.scrollTo({
     top: endpoint.offsetTop,
     left: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   });
 }
 
 navElem.addEventListener('click', sideMenuToggle);
 for (let item of sideMenuElem.querySelectorAll('a')) {
-  item.addEventListener('click', function(event) {
+  item.addEventListener('click', function (event) {
     event.preventDefault();
   });
   item.addEventListener('click', closeSideMenu);
   item.addEventListener('click', goToSection.bind(item));
 }
-
 
 
 // Header
@@ -165,7 +167,7 @@ function headerDisplay() {
       mainSectionElem.removeChild(headerElem);
     }
     if (!(document.body.children[1] === headerElem)) {
-      document.body.insertBefore(headerElem, document.body.children[1])
+      document.body.insertBefore(headerElem, document.body.children[1]);
     }
     headerElem.classList.add('fixed');
     sideMenuElem.classList.add('fixed');
@@ -175,7 +177,7 @@ function headerDisplay() {
       document.body.removeChild(headerElem);
     }
     if (!(mainSectionElem.children[1] === headerElem)) {
-      mainSectionElem.insertBefore(headerElem, mainSectionElem.children[1])
+      mainSectionElem.insertBefore(headerElem, mainSectionElem.children[1]);
     }
     headerElem.classList.remove('fixed');
     sideMenuElem.classList.remove('fixed');
@@ -204,7 +206,6 @@ document.addEventListener('scroll', headerDisplay);
 document.addEventListener('scroll', closeSideMenuOnScroll);
 
 
-
 // Replies
 // Replies
 // Replies
@@ -223,12 +224,12 @@ function switchReplies(toRight = true, initialPosX = 0, animFunc = 'cubic-bezier
   contentContainerElem.insertBefore(tempReply, contentContainerElem.children[toRight ? 3 : 1]);
   for (let item of contentContainerElem.querySelectorAll('.item')) {
     item.animate([{
-      transform: `translateX(${toRight ? initialPosX + 'px' : `calc(-200% ${initialPosX >= 0 ? '+ '+initialPosX : initialPosX}px)`})`
+      transform: `translateX(${toRight ? initialPosX + 'px' : `calc(-200% ${initialPosX >= 0 ? '+ ' + initialPosX : initialPosX}px)`})`,
     }, {
-      transform: 'translateX(-100%)'
+      transform: 'translateX(-100%)',
     }], {
       duration: animFunc !== 'cubic-bezier(0.39, 0.58, 0.5, 1)' ? REPLIES_ANIMATION_DURATION / 2 : REPLIES_ANIMATION_DURATION,
-      easing: animFunc
+      easing: animFunc,
     });
   }
 }
@@ -237,7 +238,7 @@ function switchReplies(toRight = true, initialPosX = 0, animFunc = 'cubic-bezier
 let switchInterval;
 
 function suspendIntervalSwitching(func, ...rest) {
-  return function() {
+  return function () {
     clearInterval(switchInterval);
     if (rest) {
       func(rest[0]);
@@ -245,7 +246,7 @@ function suspendIntervalSwitching(func, ...rest) {
       func();
     }
     switchInterval = setInterval(switchReplies, 3e3);
-  }
+  };
 }
 
 let switched = false;
@@ -266,7 +267,7 @@ function circleMenuActivation() {
 
 circleMenuActivation();
 
-var observer = new MutationObserver(function() {
+var observer = new MutationObserver(function () {
   circleMenuActivation();
 });
 
@@ -336,6 +337,7 @@ function dragX(element) {
     }
     switchInterval = setInterval(switchReplies, 3e3);
   }
+
   let posX = 0,
     newPosX = 0;
   element.addEventListener('mousedown', dragMouseDown);
@@ -344,7 +346,6 @@ function dragX(element) {
 for (let item of contentContainerElem.querySelectorAll('.item')) {
   dragX(item);
 }
-
 
 
 // Statistics
@@ -377,14 +378,13 @@ function animatedCounter(value) {
 function statsShow() {
   if (scrollY > statisticsElems[0].parentElement.offsetTop - offsetAnimation && !statsShown) {
     statisticsElems.forEach((item, i) => {
-      animatedCounter.call(item, Number(item.firstElementChild.innerHTML))
+      animatedCounter.call(item, Number(item.firstElementChild.innerHTML));
     });
     statsShown = true;
   }
 }
 
 window.addEventListener('scroll', statsShow);
-
 
 
 // Questions
@@ -401,7 +401,7 @@ const keys = {
   37: 1,
   38: 1,
   39: 1,
-  40: 1
+  40: 1,
 };
 
 function preventDefaultForScrollKeys(e) {
@@ -414,13 +414,14 @@ function preventDefaultForScrollKeys(e) {
 let supportsPassive = false;
 try {
   window.addEventListener('test', null, Object.defineProperty({}, 'passive', {
-    get: function() {
+    get: function () {
       supportsPassive = true;
-    }
+    },
   }));
-} catch (e) {}
+} catch (e) {
+}
 let wheelOpt = supportsPassive ? {
-  passive: false
+  passive: false,
 } : false;
 let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
@@ -442,7 +443,7 @@ function questionShow() {
         window.scrollTo({
           top: this.offsetTop - headerElem.offsetHeight - 10,
           left: 0,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
         clearInterval(interval);
         interval = setInterval(() => {
@@ -461,5 +462,5 @@ function questionShow() {
 }
 
 questionContainerElems.forEach((item, i, arr) => {
-  item.querySelector('.question_block').addEventListener('click', questionShow.bind(item))
+  item.querySelector('.question_block').addEventListener('click', questionShow.bind(item));
 });

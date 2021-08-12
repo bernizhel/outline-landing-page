@@ -11,11 +11,10 @@
   }
 
   main .main_img {
-    text-align: right;
-    position: relative;
-    bottom: -50px;
+    bottom: -100px;
     z-index: 2;
-    height: 700px;
+    height: 100%;
+    text-align: right;
   }
 
   .clients ul {
@@ -42,9 +41,10 @@
     flex-wrap: wrap;
   }
 
-  .features .feature_container {
+  .page .features .features_container .feature_container {
     flex-basis: 50%;
     box-sizing: border-box;
+    margin: 0;
   }
 
   .features .feature {
@@ -76,7 +76,7 @@
 
   .design .design_container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-rows: 1fr 1fr 2fr;
   }
 
   .design .design_container .item {
@@ -103,9 +103,8 @@
     grid-row: 3;
   }
 
-  .design img {
-    height: 900px;
-    left: 0;
+  .page .design .design_container img {
+    height: 800px;
     position: relative;
   }
 
@@ -160,14 +159,16 @@
     margin-top: 10px;
   }
 
-  main .main_img {
-    bottom: -100px;
-    z-index: 2;
-    height: 100%;
+  .page main .main_img img {
+    width: 100%;
+    height: 500px;
   }
 
-  main img {
-    height: 700px;
+  main .main_img {
+    text-align: right;
+    position: relative;
+    bottom: -50px;
+    z-index: 2;
   }
 
   .clients {
@@ -184,12 +185,14 @@
   }
 
   .features .features_container {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
-  .features .feature_container {
-    flex-basis: 50%;
+  .page .features .features_container .feature_container {
+    flex-basis: 100%;
     box-sizing: border-box;
+    margin: 0;
+    padding: 15px 0 0 0;
   }
 
   .features .feature {
@@ -224,15 +227,21 @@
   }
 
   .design .design_container {
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   .design .design_container .item {
     padding: 10px;
   }
 
-  .design .design_container img {
-    height: 650px;
+  .page .design .design_container img {
+    height: 500px;
+  }
+
+  .page .design .design_container .img_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .replies .content_container .item {
@@ -263,5 +272,9 @@
   .questions_text p {
     font-size: 1rem;
     line-height: 0.875rem;
+  }
+
+  footer .container {
+    flex-direction: column;
   }
 }
