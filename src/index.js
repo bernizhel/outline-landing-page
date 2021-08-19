@@ -29,9 +29,9 @@ window.onunload = () => {
 const sideMenuElem = document.querySelector('.side_menu');
 const menuBarsElem = document.querySelector('.menu-bars');
 const pageElem = document.querySelector('.page');
-const navElem = document.querySelector('nav');
+const navElem = document.querySelectorAll('nav');
 const headerElem = document.querySelector('header');
-const placeholderElem = document.querySelector('.placeholder');
+const asideHeader = document.querySelector('aside.header.fixed');
 const mainSectionElem = document.querySelector('.main');
 const mainElem = document.querySelector('main');
 const clientsElem = document.querySelector('.clients');
@@ -105,9 +105,7 @@ function sideMenuToggle() {
   menuBarsElem.classList.toggle('active');
   pageElem.classList.toggle('active');
   footerElem.classList.toggle('active');
-  if (headerElem.classList.contains('fixed')) {
-    headerElem.classList.toggle('active');
-  }
+  asideHeader.classList.toggle('active');
 }
 
 function closeSideMenu() {
@@ -142,13 +140,13 @@ function goToSection() {
     }
   }
   window.scrollTo({
-    top: endpoint.offsetTop,
+    top: endpoint.offsetTop - (asideHeader.offsetHeight || (headerElem.offsetHeight - 40)),
     left: 0,
     behavior: 'smooth',
   });
 }
 
-navElem.addEventListener('click', sideMenuToggle);
+navElem.forEach(nav => nav.addEventListener('click', sideMenuToggle));
 for (let item of sideMenuElem.querySelectorAll('a')) {
   item.addEventListener('click', function (event) {
     event.preventDefault();
@@ -163,31 +161,15 @@ for (let item of sideMenuElem.querySelectorAll('a')) {
 // Header
 function headerDisplay() {
   if (scrollY >= mainElem.offsetTop + 400) {
-    if (mainSectionElem.children[1] === headerElem) {
-      mainSectionElem.removeChild(headerElem);
-    }
-    if (!(document.body.children[1] === headerElem)) {
-      document.body.insertBefore(headerElem, document.body.children[1]);
-    }
-    headerElem.classList.add('fixed');
     sideMenuElem.classList.add('fixed');
-    placeholderElem.classList.add('showed');
   } else {
-    if (document.body.children[1] === headerElem) {
-      document.body.removeChild(headerElem);
-    }
-    if (!(mainSectionElem.children[1] === headerElem)) {
-      mainSectionElem.insertBefore(headerElem, mainSectionElem.children[1]);
-    }
-    headerElem.classList.remove('fixed');
     sideMenuElem.classList.remove('fixed');
-    placeholderElem.classList.remove('showed');
   }
 
   if (scrollY >= clientsElem.offsetTop + headerElem.offsetHeight) {
-    headerElem.classList.add('showed');
+    asideHeader.classList.add('showed');
   } else {
-    headerElem.classList.remove('showed');
+    asideHeader.classList.remove('showed');
   }
 }
 
@@ -199,7 +181,7 @@ function closeSideMenuOnScroll() {
   menuBarsElem.classList.remove('active');
   pageElem.classList.remove('active');
   footerElem.classList.remove('active');
-  headerElem.classList.remove('active');
+  asideHeader.classList.remove('active');
 }
 
 document.addEventListener('scroll', headerDisplay);
@@ -304,16 +286,15 @@ arrowRightElem.addEventListener('click', suspendIntervalSwitching(switchReplies)
 function dragX(element) {
   function dragMouseDown(e) {
     clearInterval(switchInterval);
-    e = e || window.event;
     e.preventDefault();
     posX = e.clientX;
+    console.log(e)
     element.style.cursor = 'grab';
     document.onmouseup = closeDragElement;
     document.onmousemove = elementDrag;
   }
 
   function elementDrag(e) {
-    e = e || window.event;
     e.preventDefault();
     newPosX = e.clientX - posX;
     for (let child of element.parentElement.querySelectorAll('.item')) {
@@ -341,6 +322,7 @@ function dragX(element) {
   let posX = 0,
     newPosX = 0;
   element.addEventListener('mousedown', dragMouseDown);
+  element.addEventListener('touchstart', dragMouseDown);
 }
 
 for (let item of contentContainerElem.querySelectorAll('.item')) {
@@ -390,8 +372,6 @@ window.addEventListener('scroll', statsShow);
 // Questions
 // Questions
 // Questions
-
-// TODO: animated resizing
 
 function preventDefault(event) {
   event.preventDefault();

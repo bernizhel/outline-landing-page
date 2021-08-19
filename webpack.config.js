@@ -23,7 +23,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'],
     alias: {
-      '@s': path.resolve(__dirname, 'src', 'styles'),
+      '@s': path.resolve(__dirname, 'src/styles'),
     },
   },
   devServer: {
@@ -56,17 +56,18 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [MiniCSSExtractWP.loader, 'css-loader'],
+        use: ['style-loader', MiniCSSExtractWP.loader, 'css-loader'],
       },
       {
-        test: /\.(bmp|gif|jpe?g|png)$/,
-        use: ['file-loader'],
+        test: /\.(png|jpe?g|gif)$/,
+        loader: 'file-loader',
       },
     ],
   },
   plugins: [
     new HtmlWP({
       template: './index.html',
+      filename: 'index.html',
       inject: 'body',
     }),
     new CleanWebpackPlugin(),
@@ -111,7 +112,7 @@ module.exports = {
           from: path.resolve(__dirname, 'src', 'img', 'user_3.jpg'),
           to: path.resolve(__dirname, 'public'),
         },
-      ]
-    })
+      ],
+    }),
   ],
 };
