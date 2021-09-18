@@ -2,10 +2,10 @@
 /* REPLIES */
 /* REPLIES */
 .replies .item {
-  transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .replies .circle_container:hover .circle,
 .replies .circle_container.active .circle {
-  background-color: #ffff;
+    background-color: #ffff;
 }

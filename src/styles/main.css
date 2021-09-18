@@ -1,7 +1,8 @@
 /* GLOBAL */
 /* GLOBAL */
 /* GLOBAL */
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -13,7 +14,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", arial, sans-serif;
+    font-family: 'Montserrat', arial, sans-serif;
 }
 
 ::selection {
@@ -33,7 +34,7 @@ button {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 button:hover {
@@ -59,7 +60,8 @@ button:hover {
 /* HEADER */
 /* HEADER */
 /* HEADER */
-header, .header {
+header,
+.header {
     display: flex;
     justify-content: center;
 }
@@ -89,7 +91,7 @@ header .heading,
     border: 2px solid #fff;
     cursor: pointer;
     letter-spacing: 2px;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 header .heading:hover,
@@ -138,7 +140,7 @@ header .bar,
     border-radius: 1px;
     background-color: #fff;
     margin: 3px 0;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 /* MAIN */
@@ -266,7 +268,7 @@ main .main_text button .fab.fa-apple {
     padding: 30px;
     text-align: center;
     cursor: pointer;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 .features .feature:hover {
@@ -338,7 +340,7 @@ main .main_text button .fab.fa-apple {
     padding: 25px;
     box-sizing: border-box;
     text-align: center;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
     z-index: 2;
     position: static;
 }
@@ -474,7 +476,7 @@ main .main_text button .fab.fa-apple {
     top: 30%;
     width: 20px;
     height: auto;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
     cursor: pointer;
 }
 
@@ -554,7 +556,7 @@ main .main_text button .fab.fa-apple {
     height: 12px;
     border-radius: 50%;
     background-color: #fff7;
-    transition: .2s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.2s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 /* STATISTICS */
@@ -636,7 +638,7 @@ main .main_text button .fab.fa-apple {
 .questions .question_container {
     margin: 0;
     padding: 30px 30px 20px 30px;
-    transition: .3s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.3s cubic-bezier(0.39, 0.58, 0.5, 1);
     transition: border 0s;
 }
 
@@ -663,7 +665,7 @@ main .main_text button .fab.fa-apple {
     top: 0;
     height: 32px;
     width: 32px;
-    transition: .3s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.3s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 .questions .question_container.active .arrow .bar_container {
@@ -698,7 +700,7 @@ main .main_text button .fab.fa-apple {
     display: none;
     margin: 25px 0;
     overflow: hidden;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 .questions .question_container.active p {
@@ -714,7 +716,7 @@ footer {
     padding: 25px;
     display: flex;
     justify-content: center;
-    transition: .5s cubic-bezier(0.39, 0.58, 0.5, 1);
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.5, 1);
 }
 
 footer .container {

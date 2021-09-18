@@ -1,373 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Outline</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous"
+        />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Outline</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-</head>
-
-<body>
-  <aside class="side_menu">
-    <a href="#home">Home</a>
-    <a href="#features">Features</a>
-    <a href="#design">Design</a>
-    <a href="#testimonies">Testimonies</a>
-    <a href="#questions">FAQs</a>
-  </aside>
-  <aside class="header fixed">
-    <div class="container">
-      <a href="index.html">
-        <span class="heading">OUTLINE</span>
-      </a>
-      <nav>
-        <p>MENU</p>
-        <div class="menu-bars">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </div>
-  </aside>
-  <div class="page">
-    <div class="foreboard">
-      <section class="main" id="home">
-        <!-- HEADER -->
-        <header>
-          <div class="container">
-            <a href="index.html">
-              <span class="heading">OUTLINE</span>
-            </a>
-            <nav>
-              <p>MENU</p>
-              <div class="menu-bars">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
-            </nav>
-          </div>
-        </header>
-        <!-- MAIN -->
-        <main class="to_animate">
-          <div class="container">
-            <div class="main_text">
-              <h2>We take your business to the next level.</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-              <button>
-                <i class="fab fa-apple"></i>
-                <span class="inner_text">SEE ON APPSTORE</span>
-              </button>
+    <body>
+        <aside class="side_menu">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#design">Design</a>
+            <a href="#testimonies">Testimonies</a>
+            <a href="#questions">FAQs</a>
+        </aside>
+        <aside class="header fixed">
+            <div class="container">
+                <a href="index.html">
+                    <span class="heading">OUTLINE</span>
+                </a>
+                <nav>
+                    <p>MENU</p>
+                    <div class="menu-bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
             </div>
-            <div class="main_img">
-              <img src="iphone_6_3.png" alt="iphone">
+        </aside>
+        <div class="page">
+            <div class="foreboard">
+                <section class="main" id="home">
+                    <!-- HEADER -->
+                    <header>
+                        <div class="container">
+                            <a href="index.html">
+                                <span class="heading">OUTLINE</span>
+                            </a>
+                            <nav>
+                                <p>MENU</p>
+                                <div class="menu-bars">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </div>
+                            </nav>
+                        </div>
+                    </header>
+                    <!-- MAIN -->
+                    <main class="to_animate">
+                        <div class="container">
+                            <div class="main_text">
+                                <h2>
+                                    We take your business to the next level.
+                                </h2>
+                                <p>
+                                    Far far away, behind the word mountains, far
+                                    from the countries Vokalia and Consonantia,
+                                    there live the blind texts. Separated they
+                                    live in Bookmarksgrove.
+                                </p>
+                                <button>
+                                    <i class="fab fa-apple"></i>
+                                    <span class="inner_text"
+                                        >SEE ON APPSTORE</span
+                                    >
+                                </button>
+                            </div>
+                            <div class="main_img">
+                                <img
+                                    src="<%=require('./img/iphone_6_3.png')%>"
+                                    alt="iphone"
+                                />
+                            </div>
+                        </div>
+                    </main>
+                </section>
+                <!-- CLIENTS -->
+                <section class="clients to_animate">
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <img
+                                    src="<%=require('./img/client_1.png')%>"
+                                    alt="Square"
+                                />
+                            </li>
+                            <li>
+                                <img
+                                    src="<%=require('./img/client_2.png')%>"
+                                    alt="Airbnb"
+                                />
+                            </li>
+                            <li>
+                                <img
+                                    src="<%=require('./img/client_3.png')%>"
+                                    alt="Evernote"
+                                />
+                            </li>
+                            <li>
+                                <img
+                                    src="<%=require('./img/client_4.png')%>"
+                                    alt="Pinterest"
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-          </div>
-        </main>
-      </section>
-      <!-- CLIENTS -->
-      <section class="clients to_animate">
-        <div class="container">
-          <ul>
-            <li>
-              <img src="client_1.png" alt="Square">
-            </li>
-            <li>
-              <img src="client_2.png" alt="Airbnb">
-            </li>
-            <li>
-              <img src="client_3.png" alt="Evernote">
-            </li>
-            <li>
-              <img src="client_4.png" alt="Pinterest">
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
-    <!-- FEATURES -->
-    <section class="features to_animate" id="features">
-      <div class="container">
-        <div class="features_text">
-          <h3>Explore amazing features</h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-        </div>
-        <div class="features_container">
-          <div class="feature_container">
-            <div class="feature">
-              <i class="fas fa-user-friends"></i>
-              <h4>100% FREE</h4>
-              <p>Far far away, behind the word mountains</p>
-            </div>
-          </div>
-          <div class="feature_container">
-            <div class="feature">
-              <i class="fas fa-mobile-alt"></i>
-              <h4>FULLY RESPONSIVE</h4>
-              <p>Far far away, behind the word mountains</p>
-            </div>
-          </div>
-          <div class="feature_container">
-            <div class="feature">
-              <i class="far fa-eye"></i>
-              <h4>RETINA-READY</h4>
-              <p>Far far away, behind the word mountains</p>
-            </div>
-          </div>
-          <div class="feature_container">
-            <div class="feature">
-              <i class="fas fa-cloud-download-alt"></i>
-              <h4>DOWNLOAD</h4>
-              <p>Far far away, behind the word mountains</p>
-            </div>
-          </div>
-        </div>
-        <button>VIEW ALL FEATURES</button>
-      </div>
-    </section>
-    <!-- DESIGN -->
-    <section class="design to_animate" id="design">
-      <div class="container">
-        <div class="design_text">
-          <h3>Better design</h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-        </div>
-        <div class="design_container">
-          <div class="item">
-            <i class="fas fa-desktop"></i>
-            <h4>CROSS PLATFORM SUPPORT</h4>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-          <div class="item">
-            <i class="fas fa-anchor"></i>
-            <h4>PROTOTYPING TOOLS</h4>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-          <div class="img_container">
-            <img src="iphone_blank_2.png" alt="phone">
-          </div>
-          <div class="item">
-            <i class="fas fa-rocket"></i>
-            <h4>POWERFUL DESIGN</h4>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-          <div class="item">
-            <i class="fas fa-hands-helping"></i>
-            <h4>USER COLLABORATION</h4>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- TESTIMONIES -->
-    <div class="testimonies" id="testimonies">
-      <!-- REPLIES -->
-      <section class="replies to_animate">
-        <div class="block"></div>
-        <div class="container">
-          <div class="content_container">
-            <div class="arrow left">
-              <div class="bar_container">
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
-            </div>
-            <div class="item" id="reply1">
-              <div class="item_img">
-                <img src="user.jpg" alt="user_1">
-              </div>
-              <div class="item_text">
-                <blockquote cite="">
-                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-                </blockquote>
-                <p><span class="author">GUSTAV BARROW</span>, XYZ INC.</p>
-              </div>
-            </div>
-            <div class="item active" id="reply2">
-              <div class="item_img">
-                <img src="user_2.jpg" alt="user_2">
-              </div>
-              <div class="item_text">
-                <blockquote cite="">
-                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-                </blockquote>
-                <p><span class="author">GUSTAV BARROW</span>, XYZ INC.</p>
-              </div>
-            </div>
-            <div class="item" id="reply3">
-              <div class="item_img">
-                <img src="user_3.jpg" alt="user_3">
-              </div>
-              <div class="item_text">
-                <blockquote cite="">
-                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-                </blockquote>
-                <p><span class="author">GUSTAV BARROW</span>, XYZ INC.</p>
-              </div>
-            </div>
-            <div class="arrow right">
-              <div class="bar_container">
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
-            </div>
-          </div>
-          <div class="replies_menu">
-            <div class="circle_container" id="circle1">
-              <span class="circle"></span>
-            </div>
-            <div class="circle_container" id="circle2">
-              <span class="circle"></span>
-            </div>
-            <div class="circle_container" id="circle3">
-              <span class="circle"></span>
-            </div>
-          </div>
-        </div>
-        <div class="block"></div>
-      </section>
-      <!-- STATISTICS -->
-      <section class="statistics to_animate">
-        <div class="container">
-          <div>
-            <p>28</p>
-            <p>CUSTOMERS</p>
-          </div>
-          <div>
-            <p>57</p>
-            <p>COMPLETED APPS</p>
-          </div>
-          <div>
-            <p>34023</p>
-            <p>DOWNLOADS</p>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!-- QUESTIONS -->
-    <section class="questions to_animate" id="questions">
-      <div class="container">
-        <div class="questions_text">
-          <h3>Frequently Ask Questions</h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-        </div>
-        <div class="questions_container">
-          <div class="question_container active">
-            <div class="question_block">
-              <div class="question">What is Outline?</div>
-              <div class="arrow">
-                <div class="bar_container">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
+            <!-- FEATURES -->
+            <section class="features to_animate" id="features">
+                <div class="container">
+                    <div class="features_text">
+                        <h3>Explore amazing features</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from
+                            the countries Vokalia and Consonantia, there live
+                            the blind texts. Separated they live in
+                            Bookmarksgrove right at the coast of the Semantics,
+                            a large language ocean.
+                        </p>
+                    </div>
+                    <div class="features_container">
+                        <div class="feature_container">
+                            <div class="feature">
+                                <i class="fas fa-user-friends"></i>
+                                <h4>100% FREE</h4>
+                                <p>Far far away, behind the word mountains</p>
+                            </div>
+                        </div>
+                        <div class="feature_container">
+                            <div class="feature">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>FULLY RESPONSIVE</h4>
+                                <p>Far far away, behind the word mountains</p>
+                            </div>
+                        </div>
+                        <div class="feature_container">
+                            <div class="feature">
+                                <i class="far fa-eye"></i>
+                                <h4>RETINA-READY</h4>
+                                <p>Far far away, behind the word mountains</p>
+                            </div>
+                        </div>
+                        <div class="feature_container">
+                            <div class="feature">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                <h4>DOWNLOAD</h4>
+                                <p>Far far away, behind the word mountains</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>VIEW ALL FEATURES</button>
                 </div>
-              </div>
-            </div>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
-              Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is
-              an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          </div>
-          <div class="question_container">
-            <div class="question_block">
-              <div class="question">Is Outline Free?</div>
-              <div class="arrow">
-                <div class="bar_container">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
+            </section>
+            <!-- DESIGN -->
+            <section class="design to_animate" id="design">
+                <div class="container">
+                    <div class="design_text">
+                        <h3>Better design</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from
+                            the countries Vokalia and Consonantia, there live
+                            the blind texts. Separated they live in
+                            Bookmarksgrove right at the coast of the Semantics,
+                            a large language ocean.
+                        </p>
+                    </div>
+                    <div class="design_container">
+                        <div class="item">
+                            <i class="fas fa-desktop"></i>
+                            <h4>CROSS PLATFORM SUPPORT</h4>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-anchor"></i>
+                            <h4>PROTOTYPING TOOLS</h4>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts.
+                            </p>
+                        </div>
+                        <div class="img_container">
+                            <img
+                                src="<%=require('./img/iphone_blank_2.png')%>"
+                                alt="phone"
+                            />
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-rocket"></i>
+                            <h4>POWERFUL DESIGN</h4>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>USER COLLABORATION</h4>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </section>
+            <!-- TESTIMONIES -->
+            <div class="testimonies" id="testimonies">
+                <!-- REPLIES -->
+                <section class="replies to_animate">
+                    <div class="block"></div>
+                    <div class="container">
+                        <div class="content_container">
+                            <div class="arrow left">
+                                <div class="bar_container">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </div>
+                            </div>
+                            <div class="item" id="reply1">
+                                <div class="item_img">
+                                    <img
+                                        src="<%=require('./img/user.jpg')%>"
+                                        alt="user_1"
+                                    />
+                                </div>
+                                <div class="item_text">
+                                    <blockquote cite="">
+                                        Far far away, behind the word mountains,
+                                        far from the countries Vokalia and
+                                        Consonantia, there live the blind texts.
+                                        Separated they live in Bookmarksgrove
+                                        right at the coast of the Semantics, a
+                                        large language ocean.
+                                    </blockquote>
+                                    <p>
+                                        <span class="author">GUSTAV BARROW</span
+                                        >, XYZ INC.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item active" id="reply2">
+                                <div class="item_img">
+                                    <img
+                                        src="<%=require('./img/user_2.jpg')%>"
+                                        alt="user_2"
+                                    />
+                                </div>
+                                <div class="item_text">
+                                    <blockquote cite="">
+                                        Far far away, behind the word mountains,
+                                        far from the countries Vokalia and
+                                        Consonantia, there live the blind texts.
+                                        Separated they live in Bookmarksgrove
+                                        right at the coast of the Semantics, a
+                                        large language ocean.
+                                    </blockquote>
+                                    <p>
+                                        <span class="author">GUSTAV BARROW</span
+                                        >, XYZ INC.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item" id="reply3">
+                                <div class="item_img">
+                                    <img
+                                        src="<%=require('./img/user_3.jpg')%>"
+                                        alt="user_3"
+                                    />
+                                </div>
+                                <div class="item_text">
+                                    <blockquote cite="">
+                                        Far far away, behind the word mountains,
+                                        far from the countries Vokalia and
+                                        Consonantia, there live the blind texts.
+                                        Separated they live in Bookmarksgrove
+                                        right at the coast of the Semantics, a
+                                        large language ocean.
+                                    </blockquote>
+                                    <p>
+                                        <span class="author">GUSTAV BARROW</span
+                                        >, XYZ INC.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="arrow right">
+                                <div class="bar_container">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="replies_menu">
+                            <div class="circle_container" id="circle1">
+                                <span class="circle"></span>
+                            </div>
+                            <div class="circle_container" id="circle2">
+                                <span class="circle"></span>
+                            </div>
+                            <div class="circle_container" id="circle3">
+                                <span class="circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block"></div>
+                </section>
+                <!-- STATISTICS -->
+                <section class="statistics to_animate">
+                    <div class="container">
+                        <div>
+                            <p>28</p>
+                            <p>CUSTOMERS</p>
+                        </div>
+                        <div>
+                            <p>57</p>
+                            <p>COMPLETED APPS</p>
+                        </div>
+                        <div>
+                            <p>34023</p>
+                            <p>DOWNLOADS</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
-              Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is
-              an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          </div>
-          <div class="question_container">
-            <div class="question_block">
-              <div class="question">How do I use Outline Features?</div>
-              <div class="arrow">
-                <div class="bar_container">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
+            <!-- QUESTIONS -->
+            <section class="questions to_animate" id="questions">
+                <div class="container">
+                    <div class="questions_text">
+                        <h3>Frequently Ask Questions</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from
+                            the countries Vokalia and Consonantia, there live
+                            the blind texts.
+                        </p>
+                    </div>
+                    <div class="questions_container">
+                        <div class="question_container active">
+                            <div class="question_block">
+                                <div class="question">What is Outline?</div>
+                                <div class="arrow">
+                                    <div class="bar_container">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live
+                                in Bookmarksgrove right at the coast of the
+                                Semantics, a large language ocean. A small river
+                                named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a
+                                paradisematic country, in which roasted parts of
+                                sentences fly into your mouth. Even the
+                                all-powerful Pointing has no control about the
+                                blind texts it is an almost unorthographic life
+                                One day however a small line of blind text by
+                                the name of Lorem Ipsum decided to leave for the
+                                far World of Grammar.
+                            </p>
+                        </div>
+                        <div class="question_container">
+                            <div class="question_block">
+                                <div class="question">Is Outline Free?</div>
+                                <div class="arrow">
+                                    <div class="bar_container">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live
+                                in Bookmarksgrove right at the coast of the
+                                Semantics, a large language ocean. A small river
+                                named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a
+                                paradisematic country, in which roasted parts of
+                                sentences fly into your mouth. Even the
+                                all-powerful Pointing has no control about the
+                                blind texts it is an almost unorthographic life
+                                One day however a small line of blind text by
+                                the name of Lorem Ipsum decided to leave for the
+                                far World of Grammar.
+                            </p>
+                        </div>
+                        <div class="question_container">
+                            <div class="question_block">
+                                <div class="question">
+                                    How do I use Outline Features?
+                                </div>
+                                <div class="arrow">
+                                    <div class="bar_container">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live
+                                in Bookmarksgrove right at the coast of the
+                                Semantics, a large language ocean. A small river
+                                named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a
+                                paradisematic country, in which roasted parts of
+                                sentences fly into your mouth. Even the
+                                all-powerful Pointing has no control about the
+                                blind texts it is an almost unorthographic life
+                                One day however a small line of blind text by
+                                the name of Lorem Ipsum decided to leave for the
+                                far World of Grammar.
+                            </p>
+                        </div>
+                        <div class="question_container">
+                            <div class="question_block">
+                                <div class="question">
+                                    Which version of iOS do your apps support?
+                                </div>
+                                <div class="arrow">
+                                    <div class="bar_container">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live
+                                in Bookmarksgrove right at the coast of the
+                                Semantics, a large language ocean. A small river
+                                named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a
+                                paradisematic country, in which roasted parts of
+                                sentences fly into your mouth. Even the
+                                all-powerful Pointing has no control about the
+                                blind texts it is an almost unorthographic life
+                                One day however a small line of blind text by
+                                the name of Lorem Ipsum decided to leave for the
+                                far World of Grammar.
+                            </p>
+                        </div>
+                        <div class="question_container">
+                            <div class="question_block">
+                                <div class="question">
+                                    What languages are available?
+                                </div>
+                                <div class="arrow">
+                                    <div class="bar_container">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live
+                                in Bookmarksgrove right at the coast of the
+                                Semantics, a large language ocean. A small river
+                                named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a
+                                paradisematic country, in which roasted parts of
+                                sentences fly into your mouth. Even the
+                                all-powerful Pointing has no control about the
+                                blind texts it is an almost unorthographic life
+                                One day however a small line of blind text by
+                                the name of Lorem Ipsum decided to leave for the
+                                far World of Grammar.
+                            </p>
+                        </div>
+                        <div class="question_container">
+                            <div class="question_block">
+                                <div class="question">
+                                    I have technical problem, who do I email?
+                                </div>
+                                <div class="arrow">
+                                    <div class="bar_container">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Far far away, behind the word mountains, far
+                                from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live
+                                in Bookmarksgrove right at the coast of the
+                                Semantics, a large language ocean. A small river
+                                named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a
+                                paradisematic country, in which roasted parts of
+                                sentences fly into your mouth. Even the
+                                all-powerful Pointing has no control about the
+                                blind texts it is an almost unorthographic life
+                                One day however a small line of blind text by
+                                the name of Lorem Ipsum decided to leave for the
+                                far World of Grammar.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
-              Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is
-              an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          </div>
-          <div class="question_container">
-            <div class="question_block">
-              <div class="question">Which version of iOS do your apps support?</div>
-              <div class="arrow">
-                <div class="bar_container">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
+            </section>
+            <!-- FOOTER -->
+            <footer>
+                <div class="container">
+                    <div class="rights">
+                        <p>&copy; All rights reserved</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
-              Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is
-              an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          </div>
-          <div class="question_container">
-            <div class="question_block">
-              <div class="question">What languages are available?</div>
-              <div class="arrow">
-                <div class="bar_container">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                </div>
-              </div>
-            </div>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
-              Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is
-              an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          </div>
-          <div class="question_container">
-            <div class="question_block">
-              <div class="question">I have technical problem, who do I email?</div>
-              <div class="arrow">
-                <div class="bar_container">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                </div>
-              </div>
-            </div>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
-              Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is
-              an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          </div>
+            </footer>
         </div>
-      </div>
-    </section>
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="rights">
-          <p>&copy; All rights reserved</p>
-        </div>
-        <div class="links">
-          <a href="#">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-facebook-square"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-twitter-square"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-</body>
-
+    </body>
 </html>
