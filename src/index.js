@@ -402,7 +402,7 @@ function animatedCounter(value) {
     let addedValue = 1;
     if (value > 5000) {
         timeout = 100;
-        // Tried to create a formula, but it didn't work out
+        // Tried to create a formula, but it didn't work out well
         addedValue = Math.round(Math.pow(value / 1300, 2));
     }
     let inv = setInterval(() => {
@@ -520,7 +520,7 @@ function questionShow() {
     }
 }
 
-questionContainerElems.forEach((item, i, arr) => {
+questionContainerElems.forEach((item) => {
     item.querySelector('.question_block').addEventListener(
         'click',
         questionShow.bind(item),
